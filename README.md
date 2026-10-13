@@ -4,6 +4,7 @@ Simulador em Python que reproduz as decisões de um sistema operacional — esca
 
 > Projeto da disciplina **Sistemas Operacionais** — Engenharia da Computação (UNIFECAF).
 > Autor: Kaio Santana Rodrigues Santos.
+> Relatório técnico (parte teórica): [`docs/Relatorio_Tecnico_KernelLab.pdf`](docs/Relatorio_Tecnico_KernelLab.pdf)
 
 ---
 
