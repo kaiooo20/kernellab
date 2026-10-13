@@ -1,0 +1,24 @@
+{
+  "scheduling": {
+    "quantum": 3,
+    "aging_interval": 4,
+    "aging_floor": 1,
+    "critical_pid": "P4"
+  },
+  "analysis": {
+    "excessive_wait_factor": 1.5,
+    "excessive_normalized_turnaround": 4.0
+  },
+  "memory": {
+    "frames": 4,
+    "reference_string": [1, 2, 3, 4, 1, 2, 5, 1, 2, 3, 4, 5, 2, 1, 5, 3, 2]
+  },
+  "recommendation_weights": {
+    "avg_waiting": 0.20,
+    "avg_response": 0.15,
+    "critical_response": 0.30,
+    "fairness": 0.15,
+    "starvation": 0.10,
+    "context_switches": 0.10
+  }
+}

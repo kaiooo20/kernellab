@@ -1,0 +1,17 @@
+{
+  "description": "Matriz de controle de acesso. Permissões: R=ler, W=gravar, X=executar, U=utilizar o dispositivo, E=solicitar acesso exclusivo. Princípio do menor privilégio: cada processo só recebe o que sua função exige.",
+  "devices": {
+    "disco": {"capacity": 1, "description": "Armazenamento persistente (prontuários, relatórios, backups)"},
+    "rede":  {"capacity": 2, "description": "Interface de rede com até 2 transmissões simultâneas"},
+    "audio": {"capacity": 1, "description": "Sistema de áudio para alarmes sonoros"},
+    "logs":  {"capacity": 1, "description": "Arquivo de log de auditoria (append-only)"}
+  },
+  "matrix": {
+    "P1": {"rede": "RWU",  "logs": "WU"},
+    "P2": {"rede": "RWU",  "logs": "WU"},
+    "P3": {"disco": "RWU", "logs": "RU"},
+    "P4": {"audio": "WXUE", "rede": "WU", "logs": "WU"},
+    "P5": {"disco": "RWUE", "logs": "RWU"},
+    "P6": {"disco": "RWU", "rede": "RU", "logs": "WU"}
+  }
+}

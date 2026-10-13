@@ -1,0 +1,11 @@
+{
+  "description": "Processos do cenário MedControl. Menor número = maior prioridade.",
+  "processes": [
+    {"pid": "P1", "name": "Monitoramento cardíaco",   "arrival": 0, "burst": 8,  "priority": 1, "memory_mb": 120, "devices": ["rede"]},
+    {"pid": "P2", "name": "Transmissão de telemetria", "arrival": 1, "burst": 4,  "priority": 2, "memory_mb": 80,  "devices": ["rede"]},
+    {"pid": "P3", "name": "Geração de relatórios",     "arrival": 2, "burst": 9,  "priority": 4, "memory_mb": 200, "devices": ["disco"]},
+    {"pid": "P4", "name": "Emissão de alarme crítico", "arrival": 3, "burst": 2,  "priority": 0, "memory_mb": 60,  "devices": ["audio", "rede"]},
+    {"pid": "P5", "name": "Backup do sistema",         "arrival": 5, "burst": 12, "priority": 5, "memory_mb": 300, "devices": ["disco"]},
+    {"pid": "P6", "name": "Atualização de dados",      "arrival": 6, "burst": 6,  "priority": 3, "memory_mb": 150, "devices": ["disco", "rede"]}
+  ]
+}

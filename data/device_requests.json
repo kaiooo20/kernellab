@@ -1,0 +1,24 @@
+{
+  "description": "Solicitações concorrentes aos dispositivos. time = instante do pedido, duration = unidades de tempo de uso, op = R/W/X, exclusive = pede o dispositivo inteiro.",
+  "requests": [
+    {"pid": "P3", "device": "disco", "time": 0, "duration": 3, "op": "W", "exclusive": false},
+    {"pid": "P5", "device": "disco", "time": 1, "duration": 4, "op": "W", "exclusive": true},
+    {"pid": "P6", "device": "disco", "time": 1, "duration": 2, "op": "W", "exclusive": false},
+    {"pid": "P3", "device": "disco", "time": 2, "duration": 2, "op": "R", "exclusive": false},
+
+    {"pid": "P1", "device": "rede", "time": 0, "duration": 3, "op": "W", "exclusive": false},
+    {"pid": "P2", "device": "rede", "time": 0, "duration": 2, "op": "W", "exclusive": false},
+    {"pid": "P4", "device": "rede", "time": 1, "duration": 1, "op": "W", "exclusive": false},
+    {"pid": "P6", "device": "rede", "time": 2, "duration": 2, "op": "R", "exclusive": false},
+
+    {"pid": "P4", "device": "audio", "time": 1, "duration": 2, "op": "X", "exclusive": true},
+
+    {"pid": "P1", "device": "logs", "time": 0, "duration": 1, "op": "W", "exclusive": false},
+    {"pid": "P4", "device": "logs", "time": 0, "duration": 1, "op": "W", "exclusive": false},
+    {"pid": "P5", "device": "logs", "time": 1, "duration": 2, "op": "R", "exclusive": false},
+
+    {"pid": "P3", "device": "rede",  "time": 1, "duration": 1, "op": "W", "exclusive": false},
+    {"pid": "P2", "device": "audio", "time": 2, "duration": 1, "op": "X", "exclusive": false},
+    {"pid": "P6", "device": "disco", "time": 3, "duration": 1, "op": "W", "exclusive": true}
+  ]
+}
